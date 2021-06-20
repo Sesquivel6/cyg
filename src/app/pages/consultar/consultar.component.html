@@ -1,0 +1,83 @@
+<!-- NAVBAR  -->
+
+
+    <!-- FIN NAVBAR  -->
+
+    <hr>
+    <div class="container-fluid">
+
+<div class="row">
+    <h3 class="d-flex justify-content-between align-items-center mb-3"> Listado de contratos</h3>
+    
+<hr>
+
+<div class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" 
+            type="text" 
+            placeholder="(Ejemplo: 000LP2020)"
+            [(ngModel)]="searchText"
+            name="searchText"
+            aria-label="Search">        
+</div>
+
+<!-- TABLA -->
+<table *ngIf="!cargando && heroes.length > 0"
+        class="table mt-3 animated fadeIn faster">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>N° LIC</th>
+            <th>Nombre Obra</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let heroe of heroes | filterpipe :searchText; let i = index">
+            <td>{{i + 1 }}</td>
+            <td>{{heroe.nombre}}</td>
+            <td>{{heroe.poder}}</td>
+            <td>
+                <label *ngIf="heroe.vivo" class="badge badge-success">En ejecución</label>
+                <label *ngIf="!heroe.vivo" class="badge badge-warning">Informe de Selección</label>
+
+            </td>
+            <td>
+
+                    <!-- detalle btn -->
+                <button class="btn btn-info mr-2"
+                [routerLink]="['/dashboard/detalle', heroe.id]">
+                <i class="fa fa-info-circle"></i>
+                </button>
+
+                
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+
+<!-- LOADING CARGANDO-->
+<div *ngIf="cargando"
+    class="alert alert-info text-center mt-3 animated fadeIn faster">
+    <h4 class="alert-heading">Cargando</h4>
+    <p>
+        <i class="fa fa-sync-alt fa-spin fa-2x"></i>
+    </p>
+    <p class="mb-0">
+        Espere por favor
+    </p>
+</div>
+
+<!-- Mensaje Error-->
+<div *ngIf="!cargando && heroes.length === 0" 
+    class="alert alert-warning text-center mt-3 animated fadeIn faster">
+    <h4 class="alert-heading">No hay registros</h4>
+    <p>
+        <i class="fa fa-exclamation fa-2x"></i>
+    </p>    
+</div>
+
+</div>
+
+<router-outlet></router-outlet>

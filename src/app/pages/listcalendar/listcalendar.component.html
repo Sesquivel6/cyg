@@ -1,0 +1,200 @@
+<!-- https://therichpost.com/angular-11-fullcalendar-working-demo/ -->
+
+<br>
+
+<div class="container-fluid">
+    <div class="row">
+    
+        <aside class="col-md-2 mt-5">
+            <br><br><br>
+            
+            <nav class="card">
+
+                <!-- FormCheck Ingreso Documentos -->
+                <div class="form-check">
+                    <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="ing"
+                    >
+                    <label class="form-check-label" for="ing">
+                        Ingreso de documentos
+                        </label>
+                </div>
+                <!-- ---------------------------- -->
+
+                <!-- FormCheck Adjudicación Contratos -->
+                <div class="form-check">
+                    <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="adj"
+                    >
+                    <label class="form-check-label" for="adj">
+                        Adjudicación Contratos
+                        </label>
+                </div>
+                <!-- ---------------------------- -->
+
+                <!-- FormCheck Modificaciones -->
+                <div class="form-check">
+                    <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="mod"
+                    >
+                    <label class="form-check-label" for="mod">
+                        Modificaciones
+                        </label>
+                </div>
+                <!-- ---------------------------- -->
+
+                <!-- FormCheck Mostrar todo -->
+                <div class="form-check">
+                    <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="todo"
+                    id="todo"
+                    >
+                    <label class="form-check-label" for="todo">
+                        Mostrar todo
+                        </label>
+                </div>
+                <!-- ---------------------------- -->
+                
+            </nav>
+
+            <br>
+            <hr>
+            <br>
+
+
+
+            <nav class="card">
+
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="1">
+                        <label class="form-check-label" for="1">
+                        Campamentos
+                        </label>                    
+                </div>
+
+                <!-- ---------------------------- -->
+
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="2">
+                        <label class="form-check-label" for="2">
+                        Conservación de parques
+                        </label>                    
+                </div>
+
+                <!-- ---------------------------- -->
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="3">
+                        <label class="form-check-label" for="3">
+                        FSEV
+                        </label>
+                </div>
+
+                <!-- ---------------------------- -->
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="5">
+                        <label class="form-check-label" for="5">
+                        Infraestructura Sanitaria
+                        </label>
+                </div>
+
+                <!-- ---------------------------- -->
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="6">
+                        <label class="form-check-label" for="6">
+                        Pavimentos Pariticpativos
+                        </label>
+                </div>
+
+                <!-- ---------------------------- -->
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="7">
+                        <label class="form-check-label" for="7">
+                        Plan Valparaíso
+                        </label>
+                </div>
+
+                <!-- ---------------------------- -->
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="8">
+                        <label class="form-check-label" for="8">
+                        Planes urbanos (PUE)
+                        </label>
+                </div>
+
+                <!-- ---------------------------- -->
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="9">
+                        <label class="form-check-label" for="9">
+                        Proyecto Urbano (PUI)
+                        </label>
+                </div>
+
+                <!-- ---------------------------- -->
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="10">
+                        <label class="form-check-label" for="10">
+                        Recuperación de barrios
+                        </label>
+                </div>
+
+                <!-- ---------------------------- -->
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="11">
+                        <label class="form-check-label" for="11">
+                        Espacios Públicos
+                        </label>
+                </div>
+
+                <!-- ---------------------------- -->
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="12">
+                        <label class="form-check-label" for="12">
+                        Vialidad Urbana
+                        </label>
+                </div>
+
+                <!-- ---------------------------- -->
+                <!-- FormCheck  -->
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="13">
+                        <label class="form-check-label" for="13">
+                        Mostrar todo
+                        </label>
+                </div>
+
+                <!-- ---------------------------- -->
+                
+                
+            </nav>
+        </aside> <!-- col.// -->
+
+    
+    <div class="col-md-9">
+
+        <full-calendar [options]="calendarOptions"></full-calendar>
+
+    </div>
+</div>
+</div>

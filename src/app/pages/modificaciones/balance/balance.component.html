@@ -1,0 +1,108 @@
+<div class="container-fluid">
+    <h3>Modificaciones de contrato</h3>
+    
+
+    <table id="modificaciones" class="table table-hover">
+        <thead>
+            <tr>
+                <th>N°</th>
+                <th>N° Informe</th>
+                <th width="150px">Fecha Informe</th>
+                <th>N°Resol</th>
+                <th width="150px">Fecha Resol</th>
+                <th>Cambio Plazo</th>
+                <th>Aumento</th>
+                <th>Disminución</th>
+                <th>OO.EE</th>
+                <th>Balance Final</th>
+                <th>Ver</th>
+                <th>Imprimir</th>    
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let modificacion of modificaciones; index as id">
+                <td> {{ id + 1 }}</td>
+                <td>{{modificacion.nro_informe}}</td>
+                <td>{{modificacion.fecha_informe}}</td>
+                <td>{{modificacion.n_resol}}</td>
+                <td>{{modificacion.fecha_res}}</td>
+                <td>{{modificacion.cambio_plazo}}</td>
+                <td>{{modificacion.monto_aum | currency: '$' : 'symbol' : '1.0'}}</td>
+                <td>{{modificacion.monto_dism | currency: '$' : 'symbol' : '1.0'}}</td>
+                <td>{{modificacion.monto_ooee | currency: '$' : 'symbol' : '1.0'}}</td>
+                <td>{{modificacion.monto_aum + modificacion.monto_ooee - modificacion.monto_dism | currency: '$' : 'symbol' : '1.0'}}</td>
+                
+                
+                <td>                    
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-info mr-2" data-toggle="modal" data-target="#verModal">
+                        <i class="fa fa-info-circle"></i>
+                    </button>
+                </td>
+                <td>
+                    <button class="btn btn-info mr-2"
+                    [routerLink]="['info']">
+                    <i class="fa fa-print"></i>
+                </button>
+                </td>
+            </tr>     
+        </tbody>
+        
+        <tfoot>
+            <tr>
+                <td></td>
+                <td>Total:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{total_aplazamiento}}</td>
+                <td>{{total_aum | currency: '$' : 'symbol' : '1.0'}}</td>
+                <td>{{total_dism | currency: '$' : 'symbol' : '1.0'}}</td>
+                <td>{{total_ooee | currency: '$' : 'symbol' : '1.0'}}</td>
+                <td>{{total_aum + total_ooee - total_dism | currency: '$' : 'symbol' : '1.0'}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{total_aum / 650000000 | percent:'1.2-2'}}</td>
+                <td>{{total_dism / 650000000 | percent:'1.2-2'}}</td>
+                <td>{{total_ooee / 650000000 | percent:'1.2-2'}}</td>
+                <td>{{ (total_aum + total_ooee - total_dism) / 650000000 | percent:'1.2-2'}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>        
+    </table>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="verModal" tabindex="-1" role="dialog" aria-labelledby="verModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="verModalLabel">Ver</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+            <img src="assets/img/verMod.png"/> 
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        
+        </div>
+    </div>
+    </div>
+</div>
+

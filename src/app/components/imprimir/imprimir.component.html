@@ -1,0 +1,287 @@
+
+<html>
+    <head>
+    <style type="text/css">      
+        body
+        {
+            font-family: gobcl;
+            font-size: 17px;            
+        }     
+    </style>
+    
+    </head>
+    <body>
+    
+    <div id="encabezado">
+    <table width="100%" border="0">
+        <tr>
+            <th align="left" style="padding-left:40 px">
+                <img src="http://valpo.serviu.cl/seguimientoreconstruccion/css/images/minvu-logo.jpg" width="90" height="90"/>
+            </th>
+            <th align="center">
+                
+            </th>
+            <th align="right" style="padding-right:70px">
+                Estado de Pago <br /> #N° estadoPago #
+            </th>
+        </tr>
+    </table>
+    
+    <table width="100%">
+        <tr>
+            <td align="center">
+                <b>MINISTERIO DE VIVIENDA Y URBANISMO</b><br />        
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <b>SERVICIO DE VIVIENDA Y URBANIZACIÓN</b><br />      
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                DEPARTAMENTO TÉCNICO DE CONSTRUCCIONES Y URBANIZACIÓN<br /><br />        
+            </td>
+        </tr>
+        </table>
+    </div>
+    
+    
+    
+    
+    <div id="informacion-contrato">
+    <p><b>INFORMACIÓN DEL CONTRATO</b></p>
+    
+    <table width="100%" border="0" >
+        <tr>
+            <td width="40%">OBRA: <b>#nombreObra#</b></td>
+            <td width="35%">PROPUESTA: <b>#nPropuesta#</b></td>
+            <td width="25%">N° BIP: <b>#nBip#</b></td>
+        </tr>
+        <tr>
+            <td width="40%">CIUDAD: <b>#CIUDAD#</b></td>
+            <td width="35%">RESOL. CONTRATO: <b>#nResolucionOriginal#</b></td>
+            <td width="25%">FECHA RES: <b>#fechaRes#</b></td>
+        </tr>
+        <tr>
+            <td width="40%">CONTRATISTA: <b>#nombreContratista#</b></td>
+            <td width="35%">ENTREGA DE TERRENO: <b>#entregaTerreno#</b></td>
+            <td width="25%">I.T.O: <b>#nombreITO#</b></td>
+        </tr>
+        <tr>
+            <td width="40%">MONTO CONTRATO<br> ORIGINAL: <b>#montoOriginal#</b></td>
+            <td width="35%">PLAZO EJECUCIÓN<br> ORIGINAL: <b>#plazoOriginal#</b></td>
+            <td width="25%">TÉRMINO CONTRATO<br> ORIGINAL: <b>#terminoOriginal#</b></td>
+        </tr>
+        <tr>
+            <td width="40%">MONTO CONTRATO<br> MODIFICADO: <b>#montoModificado#</b></td>
+            <td width="35%">PLAZO EJECUCIÓN<br> MODIFICADO: <b>#plazoModificado#</b></td>
+            <td width="25%">TÉRMINO CONTRATO<br> MODIFICADO: <b>#terminoModificado#</b></td>
+        </tr>
+    </table><br><br>
+    
+    <p><b>INFORMACIÓN DEL ESTADO DE PAGO</b></p>
+    
+    <table width="100%" border="0">
+        <tr>
+            <td width="50%">ESTADOS DE PAGO DE #estadoPagoActual# de #totalEP#<br /></td>
+            <td>PERIODO DEL PRESENTE ESTADO DE PAGO:<br> DEL: #fechaEP(t-1)# AL: #fechaEP(t)#<br /></td>        
+        </tr>
+        <tr>
+            <td width="50%">Monto parcial EP N° (t): #montoEP(t)<br /></td>
+            <td width="50%">Monto Acumulado EP N° (t): #montoAcumEP(t)<br /></td>
+        </tr>    
+    </table> <br>
+    </div>
+    
+    
+    
+    <div id="informacion_EP" style="border:ridge">
+    <table width="100%" border="0">
+        <p><b>VALOR ESTADO DE PAGO SEGÚN AVANCE FÍSICO</b></p>
+        <tr>
+            <td width="60%">Valor acumulado de obras ejecutadas a la fecha #fechaEP(t)#</td>
+            <td width="40%">#MontoEjecAcum(t)#</td>        
+        </tr>
+        <tr>
+            <td width="60%">Valor acumulado de las obras según estado anterior:<br /></td>
+            <td width="40%">#MontoEjecAcum(t-1)#<br /></td>
+        </tr>
+        <br />
+        <tr>
+            <td width="60%"><b>VALOR PRESENTE ESTADO DE PAGO</b><br /></td>
+            <td width="40%"><b>#valorEP(t)#</b><br /></td>
+        </tr> 
+        <br />       
+        <tr>
+            <td width="60%">Retenciones según contrato:<br /></td>
+            <td width="40%">#Total Retenciones#<br /></td>
+        </tr>   
+        <tr>
+            <td width="60%">Anticipos:<br /></td>
+            <td width="40%">#Anticipos#<br /></td>
+        </tr>   
+        <tr>
+            <td width="60%">Honorarios:<br /></td>
+            <td width="40%">#Honorarios#<br /></td>
+        </tr>
+        <tr>
+            <td width="60%">Multas:<br /></td>
+            <td width="40%">#Multas#<br /></td>
+        </tr>
+        <tr>
+            <td width="60%">Otras causas:<br /></td>
+            <td width="40%">#Otras causas#<br /></td>
+        </tr>
+        <tr>
+            <td width="60%">TOTAL DESCUENTOS:<br /></td>
+            <td width="40%">#TOTAL DESCUENTOS#<br /></td>
+        </tr><br>
+        <tr>
+            <td width="60%"><b>LIQUIDO A PAGAR:</b><br /></td>
+            <td width="40%"><b>#valorEP(t)# - #TOTAL DESCUENTOS#</b><br /></td>
+        </tr>
+    </table><br>
+    <table>
+        <tr><b>
+            SON: #valorEP(t)# EN PALABRAS 
+            <!-- EN PALABRAS SESENTA MILLONES QUINIENTOS MIL CHORROCIENTOS VEINTE Y NUEVE -->   
+        </b>     
+        </tr>
+    </table>
+    </div>
+    <br><br>
+    
+    
+    <div id="boleta-garantia" style="border:ridge">
+    <p ><b>GARANTÍAS DEL CONTRATO</b></p>
+    <table width="100%">    
+        <tr>
+            <th width="10%">N° BOLETA</th>
+            <th width="30%">BANCO</th>
+            <th width="20%">VALOR</th>
+            <th width="20%">FECHA VENC.</th>
+            <th width="20%">OBSERVACIONES</th>
+        </tr>
+        <tr>
+            <td width="10%">#boletaVigente#</td>
+            <td width="30%">#bancoBoleta#</td>
+            <td width="20%">#valorBoleta#</td>
+            <td width="20%">#vencimientoBoleta#</td>
+            <td width="20%">#ObservacionBoleta#</td>
+    
+        </tr>
+        <tr></tr>
+        
+    
+    </table>
+    </div>
+    
+    <div id="firmas_hoja1">
+    <br><br><br>
+    <table border="0" align="center" width="100% "cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="bottom"></td>	
+            <td valign="bottom"></td>
+            <td valign="bottom"></td>			
+        </tr><tr>
+            <td align="center"><b>#nombreContratista#</b></td>
+            <td align="center"><b>#nombreITO#</b></td>
+            <td align="center"><b>#id_usuario#</b></td>
+        </tr><tr>
+            <td align="center"><b></b></td>
+            <td align="center"><b>Director de Obras</b></td>
+            <td align="center"><b>Oficina de Normalización</b></td>
+        
+    </table>
+    <br><br><br><br>
+    <table border="0" align="center" width="100% "cellspacing="0" cellpadding="0">
+        <tr>
+            <td valign="bottom"></td>	
+            <td valign="bottom"></td>			
+        </tr><tr>
+            <td align="center"><b>#idEncargadoOficina#</b></td>
+            <td align="center"><b>#id_firma2_nombre#</b></td>
+        </tr><tr>
+            <td align="center"><b>#oficinaBase#</b></td>
+            <td align="center"><b>Jefe Departamento Técnico <br> de Construcciones y Urbanización</b></td>
+        </tr>
+        <tr>
+            <td align="center"><b>SERVIU Región de Valparaíso</b></td>
+            <td align="center"><b>SERVIU Región de Valparaíso</b></td>
+        </tr>
+    </table>
+    <br><br><br>
+    ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    <p><br/></p>
+    
+    </div>
+    <table>
+    
+    </table>
+    
+    
+    
+    <div id="cuadro_precio" >
+        <table align="center">
+            <tr><B>CUADRO DE PRECIO</B></tr>
+        </table><br>
+        <table border="1" align="center" width="100% "cellspacing="0" cellpadding="0">
+            <tr>
+                <th width="7%">ITEM</th>
+                <th width="20%">DESIGNACIÓN</th>
+                <th width="6%">UNI</th>
+                <th width="7%">CANTIDAD</th>
+                <th width="12%">P. UNITARIO</th>
+                <th width="12%">P. TOTAL</th>
+                <th width="12%">CANT. AVANCE</th>
+                <th width="12%">P. TOTAL</th>
+                <th width="12%">EST. ANTERIOR</th>
+            </tr>
+            <td>#compensado_item#</td>
+            <td>#compensado_designacion#</td>
+            <td>#compensado_unidad#</td>
+            <td>#compensado_cantidad#</td>
+            <td>#compensado_punit#</td>
+            <td>#compensado_ptotal#</td>
+            <td>#compensado_avance(t)#</td>
+            <td>#compensado_totalAvance#</td>
+            <td>#compensado_avance(t-1)#</td>
+    
+        </table>
+        <br><br><br>
+    
+        ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        <p><br/></p>
+    
+    <div id="informe_financiero"></div>
+    <table align="center">
+        <tr><B><u>INFORME FINANCIERO</u></B></tr>
+    </table><br>
+    <table>
+        <tr>
+            <td width="40%">PROPUESTA: <b>#nPropuesta#</b></td>
+            <td width="40%">CONTRATISTA: <b>#nombreContratista#</b></td>
+            <td width="40%">CONTRATISTA: <b>#nombreContratista#</b></td>
+            <td></td>
+        </tr>
+    </table>
+    
+    
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+    </html>
